@@ -2,35 +2,6 @@
 
 <?= $this->section('content') ?>
 
-<!-- Modal -->
-<div class="modal fade" id="ModalSuccess" tabindex="-1" role="dialog" aria-labelledby="ModalSuccessTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Success</h5>
-            </div>
-            <div class="modal-body">
-                <h5>Terima Kasih Telah Mendaftar</h5>
-                <?= session()->getFlashdata('success') ?>
-
-                <p>Agar tidak tertinggal info selanjutnya, silahkan bergabung dengan grup WhatsApp kami dengan link dibawah:</p>
-                <a href="http://localhost:8080/">Masuk Grup</a>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<?php if (session()->getFlashdata('success')) : ?>
-    <script>
-        $(document).ready(function() {
-            $('#ModalSuccess').modal('show');
-        });
-    </script>
-<?php endif; ?>
-
 <!-- Hero Section -->
 <section id="hero" class="text-white py-5" style="background-color: #FDBB5D;">
     <div class="container">
@@ -42,7 +13,10 @@
                 <h1 class="display-4 fw-bold">Pelatihan Teknologi</h1>
                 <p class="lead">Pendaftaran Pelatihan Teknologi Terdepan</p>
                 <a href="#about" class="btn btn-outline-light btn-lg mt-3">Pelajari Lebih Lanjut</a>
-                <a href="/register" class="btn btn-outline-light btn-lg mt-3">Daftar</a>
+                <?php
+                if ($sum < 200) : ?>
+                    <a href="/register" class="btn btn-outline-light btn-lg mt-3">Daftar</a>
+                <?php endif; ?>
             </div>
             <div class="col-md-6 text-center">
                 <img src="<?= base_url('assets/images/icon1.svg') ?>" class="img-fluid rounded-circle shadow-lg mt-4" alt="Pelatek Hero Image">
@@ -61,15 +35,14 @@
             </div>
             <div class="col-lg-6 mb-4">
                 <h2 class="text-center text-lg-start mb-4">Timeline Kegiatan</h2>
-                <ul class="list-group">
-                    <li class="list-group-item"><i class="bi bi-calendar-event-fill text-primary me-2"></i>6 dan 7 Juli</li>
-                    <li class="list-group-item"><i class="bi bi-calendar-event-fill text-primary me-2"></i>13 dan 14 Juli</li>
-                    <li class="list-group-item"><i class="bi bi-calendar-event-fill text-primary me-2"></i>20 dan 21 Juli</li>
-                    <li class="list-group-item"><i class="bi bi-calendar-event-fill text-primary me-2"></i>27 dan 28 Juli</li>
-                </ul>
+                <img src="<?= base_url('assets/images/timeline.svg') ?>" alt="Pelatek Timeline Image">
+
+            </div>
+            <div class="col-lg-6 mb-4">
+                <p>Jumlah pendaftar saat ini : <?= $sum; ?></p>
+                <p>Kuota tersisa <?= $sisa = 200 - $sum; ?> orang lagi</p>
             </div>
         </div>
-    </div>
 </section>
 
 <!-- Features Section -->
@@ -136,11 +109,22 @@
 <section id="register" class="bg-light py-5">
     <div class="container">
         <div class="text-center">
-            <h2 class="mb-4">Daftar Sekarang</h2>
-            <p class="lead">Segera daftarkan diri Anda untuk mengikuti pelatihan kami. Klik tombol di bawah ini untuk mendaftar.</p>
-            <a href="<?= base_url('register') ?>" class="btn btn-primary btn-lg">
-                <i class="bi bi-person-plus-fill me-2"></i> Register Sekarang
-            </a>
+            <?php
+            if ($sum < 1) : ?>
+                <h2 class="mb-4">Daftar Sekarang</h2>
+                <p class="lead">Segera daftarkan diri Anda untuk mengikuti pelatihan kami. Klik tombol di bawah ini untuk mendaftar.</p>
+                <a href="<?= base_url('register') ?>" class="btn btn-primary btn-lg">
+                    <i class="bi bi-person-plus-fill me-2"></i> Daftar Sekarang
+                </a>
+            <?php
+            else : ?>
+                <h2 class="mb-4">Pendaftaran Penuh</h2>
+                <p class="lead">Maaf karena kuota telah mencapai batas, anda sudah tidak dapat mendaftar. Silahkan hubungi kontak yang tertera untuk info selengkapnya.</p>
+
+                <a href="#" class="btn btn-warning btn-lg disabled">
+                    Kuota Penuh
+                </a>
+            <?php endif; ?>
         </div>
     </div>
 </section>
