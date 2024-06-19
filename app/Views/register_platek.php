@@ -119,47 +119,7 @@
                             <p>Silahkan lakukan pembayaran sebesar</p>
                             <h4>Rp. 10.000</h4>
                             <p>Metode Pembayaran:</p>
-                            <!-- <table>
-                                <tbody>
-                                    <tr>
-                                        <td><img src="<?= base_url('assets/images/bri.webp') ?>" alt="logo_bri" style="height: 30px; margin-right: 10px;"></td>
-                                        <td><strong>0181-01-019449-53-6</strong></td>
-                                        <td>Alya Nurul Hanifah</td>
-                                        <td><button class="btn btn-sm btn-outline-secondary" onclick="copyToClipboard('0181-01-019449-53-6')">Salin</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img src="<?= base_url('assets/images/Shopee.svg.png') ?>" alt="logo_sp" style="height: 30px; margin-right: 10px;">
-                                        </td>
-                                        <td><strong>085723639723</strong></td>
-                                        <td>alyanurulll</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-secondary" onclick="copyToClipboard('085723639723')">Salin</button>
-                                        </td>
 
-                                    <tr>
-                                        <td>
-                                            <img src="<?= base_url('assets/images/dana.png') ?>" alt="logo_dana" style="height: 30px; margin-right: 10px;">
-                                        </td>
-                                        <td><strong>085723639723</strong></td>
-                                        <td> Dian Latifah </td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-secondary" onclick="copyToClipboard('085723639723')">Salin</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img src="<?= base_url('assets/images/gopay.png') ?>" alt="logo_gopay" style="height: 30px; margin-right: 10px;">
-                                        </td>
-                                        <td><strong>085723639723</strong></td>
-                                        <td>Alya Nurul Hanifah</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-secondary" onclick="copyToClipboard('085723639723')">Salin</button>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table> -->
                             <div class="mb-3">
                                 <img src="<?= base_url('assets/images/bri.webp') ?>" alt="logo_bri" style="height: 30px; margin-right: 10px;">
                                 <strong> 0181-01-019449-53-6 </strong>(Alya Nurul Hanifah)
