@@ -1,9 +1,42 @@
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FDBB5D;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f8a024;
+}
+
 body {
-  /* font-family: Arial, sans-serif; */
   font-family: "Poppins", sans-serif!important;
   margin: 0;
   padding: 0;
   background-color: #FFF5DA;
+}
+
+.navbar-brand,
+.nav-link {
+  color: #1D284F !important;
+}
+
+.register-button {
+  background-color: #FDBB5D !important;
+}
+
+.register-button:hover {
+  background-color: #f8a024 !important;
 }
 
 .container {
@@ -75,7 +108,19 @@ header h1 {
 
 .navbar ul li a:hover {
   background: #FDBB5D;
-  border-radius: 10px;
+}
+
+@media(max-width: 992px) {
+  .register-button{
+    padding-left: 20px!important;
+    padding-right: 20px!important;
+  }
+
+  .navbar ul li a:hover {
+    background: #FDBB5D;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .footer {
@@ -91,3 +136,12 @@ header h1 {
 h1 {
   color: #1D284F;
 }
+
+.title{
+  font-family: "Raleway", sans-serif!important;
+}
+
+#about{
+  color: #1D284F!important;
+}
+

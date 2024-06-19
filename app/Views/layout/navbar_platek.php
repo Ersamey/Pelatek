@@ -5,20 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    .navbar-brand,
-    .nav-link {
-      color: #1D284F !important;
-    }
-
-    .register-button {
-      background-color: #FDBB5D !important;
-    }
-
-    .register-button:hover {
-      color: white !important;
-    }
-  </style>
 </head>
 
 <body>
