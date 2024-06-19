@@ -1,5 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
+  font-family: "Poppins", sans-serif!important;
   margin: 0;
   padding: 0;
   background-color: #FFF5DA;
@@ -69,10 +70,12 @@ header h1 {
   color: #fff;
   padding: 15px 20px;
   display: inline-block;
+  border-radius: 10px;
 }
 
 .navbar ul li a:hover {
   background: #FDBB5D;
+  border-radius: 10px;
 }
 
 .footer {

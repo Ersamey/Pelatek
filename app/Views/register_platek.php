@@ -58,7 +58,7 @@
     }
 </style>
 
-<div class="container ">
+<div class="container">
     <div class="row my-5 d-flex justify-content-center align-items-center">
         <h2 class="text-center mb-4">Formulir Pendaftaran</h2>
 

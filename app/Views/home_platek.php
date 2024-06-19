@@ -55,18 +55,13 @@
 <section id="about" class="py-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 mb-4">
-                <h2 class="text-center text-lg-start mb-4">Deskripsi Kegiatan</h2>
+            <div class="mb-4">
+                <h2 class="text-center mb-4">Deskripsi Kegiatan</h2>
                 <p class="lead">Pelatek adalah program pelatihan teknologi yang bertujuan untuk meningkatkan kemampuan teknis peserta di berbagai bidang teknologi terkini. Kami menawarkan berbagai program pelatihan yang dirancang untuk membantu peserta mencapai tujuan karir mereka.</p>
             </div>
-            <div class="col-lg-6 mb-4">
-                <h2 class="text-center text-lg-start mb-4">Timeline Kegiatan</h2>
-                <ul class="list-group">
-                    <li class="list-group-item"><i class="bi bi-calendar-event-fill text-primary me-2"></i>6 dan 7 Juli</li>
-                    <li class="list-group-item"><i class="bi bi-calendar-event-fill text-primary me-2"></i>13 dan 14 Juli</li>
-                    <li class="list-group-item"><i class="bi bi-calendar-event-fill text-primary me-2"></i>20 dan 21 Juli</li>
-                    <li class="list-group-item"><i class="bi bi-calendar-event-fill text-primary me-2"></i>27 dan 28 Juli</li>
-                </ul>
+            <div class="mb-4 text-center">
+                <h2 class="mb-4">Timeline Kegiatan</h2>
+                <img src="<?= base_url('assets/images/timeline.png') ?>" alt="" class="img-fluid">
             </div>
         </div>
     </div>
