@@ -8,7 +8,7 @@ use App\Models\RegisterModel;
 // use PhpOffice\PhpSpreadsheet\Spreadsheet;
 // use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
-require_once 'C:\xampp\htdocs\platek\vendor\autoload.php';
+//require_once 'C:\xampp\htdocs\platek\vendor\autoload.php';
 
 class RegisterPlatek extends Controller
 {
