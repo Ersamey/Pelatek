@@ -99,16 +99,16 @@
         <div class="row justify-content-center">
             <div class="col-lg-6 text-center">
                 <p class="lead">Untuk informasi lebih lanjut, hubungi kami melalui:</p>
-                <a href="https://wa.me/6282260435604" class="d-block mb-3 text-decoration-none text-light" target="_blank">
+                <a href="https://wa.me/6282320514659" class="d-block text-decoration-none text-light" target="_blank">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-whatsapp display-5 me-3" style="font-size: 1.5rem;"></i>
+                        <span class="lead"><strong>Adel: +62 823-2051-4659</strong></span>
+                    </div>
+                </a>
+                <a href="https://wa.me/6282260435604" class="d-block mt-3 text-decoration-none text-light" target="_blank">
                     <div class="d-flex align-items-center justify-content-center">
                         <i class="bi bi-whatsapp display-5 me-3" style="font-size: 1.5rem;"></i>
                         <span class="lead"><strong>Ester: +62 822-6043-5604</strong></span>
-                    </div>
-                </a>
-                <a href="https://wa.me/6281211806375" class="d-block text-decoration-none text-light" target="_blank">
-                    <div class="d-flex align-items-center justify-content-center">
-                        <i class="bi bi-whatsapp display-5 me-3" style="font-size: 1.5rem;"></i>
-                        <span class="lead"><strong>Meisya: +62 812-1180-6375</strong></span>
                     </div>
                 </a>
             </div>
