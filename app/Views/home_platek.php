@@ -34,8 +34,10 @@
                 <h2 class="text-center mb-4 title fw-bold">About</h2>
                 <div class="row">
                     <div class="col-md-7">
-                        <p class="fw-bold" style="font-size: 1.2em;">Pelatihan Teknologi</p>
-                        <p class="lead">Pelatek adalah program pelatihan teknologi yang bertujuan untuk meningkatkan kemampuan teknis peserta di berbagai bidang teknologi terkini. Kami menawarkan berbagai program pelatihan yang dirancang untuk membantu peserta mencapai tujuan karir mereka.</p>
+                        <p class="fw-bold d-inline" style="font-size: 1.2em;">BOOTCAMP PELATIHAN TEKNOLOGI <br> </p>
+                        <p class="font-italic">"Creativity through Programming: Learning Web Development"</p>
+                        <p style="font-size: 1.3em;">Kegiatan Pelatihan Teknologi ini akan diadakan secara <strong>daring</strong> melalui Zoom selama 2 jam 30 menit yang akan mempelajari materi dasar tentang <strong>web development</strong>  yang mencakup <strong>HTML, CSS, dan JavaScript</strong>. Melalui Pelatihan Teknologi ini, peserta diharapkan mengenali dunia programming dan akan mengerti materi tersebut sehingga dapat mengaplikasikannya sendiri.
+                        </p>
                     </div>
                     <div class="col-md-5">
                         <img src="<?= base_url('assets/images/poster.svg') ?>" alt="" class="img-fluid">
