@@ -5,7 +5,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\RegisterModel;
 
-require_once 'C:\xampp\htdocs\platek\vendor\autoload.php';
+// require_once 'C:\xampp\htdocs\platek\vendor\autoload.php';
 
 class RegisterPlatek extends Controller
 {

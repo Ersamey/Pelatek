@@ -11,27 +11,20 @@
     .step-button-group {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         margin-bottom: 20px;
     }
 
-
     .step-button-group .btn {
-
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 10px 80px;
+        padding: 10px 20px;
         background-color: #e0e0e0;
         color: #343a40;
         font-weight: bold;
-    }
-
-    .step-button-group .btn:last-child {
-        margin-right: 0;
-    }
-
-    .step-button-group .btn i {
-        margin-right: 5px;
+        margin: 5px;
+        flex: 1 1 auto;
     }
 
     .step-button-group .btn.active {
@@ -39,26 +32,27 @@
         color: white;
     }
 
-    /* Center the card horizontally */
     .carousel-item .card {
         margin: 0 auto;
-    }
-
-    /* Center the card vertically */
-    .carousel-item .card {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        max-width: 100%;
     }
 
     .btn-container {
         display: flex;
-        justify-content: space-between;
-        /* margin: ; */
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .btn-container .btn {
+        margin: 5px;
     }
 </style>
 
-<div class="container ">
+<div class="container-fluid">
     <div class="row my-5 d-flex justify-content-center align-items-center">
         <h2 class="text-center mb-4">Formulir Pendaftaran</h2>
 
@@ -74,6 +68,7 @@
                 <i class="fa-solid fa-3"></i> Upload
             </button>
         </div>
+
         <?php if (session()->getFlashdata('errors')) : ?>
             <div class="alert alert-danger">
                 <ul>
@@ -88,7 +83,7 @@
             <div class="carousel-inner">
                 <!-- Slide 1 -->
                 <div class="carousel-item active">
-                    <div class="card" style="width: 50rem; height:25rem">
+                    <div class="card mx-auto" style="max-width: 100%;">
                         <div class="card-body">
                             <form id="registerForm" action="<?= base_url('register/save') ?>" method="post" enctype="multipart/form-data">
                                 <div class="mb-3">
@@ -107,13 +102,12 @@
                                     <label for="afiliasi" class="form-label">Afiliasi (Sekolah atau Institusi)</label>
                                     <input type="text" class="form-control" id="afiliasi" name="afiliasi" value="<?= old('afiliasi') ?>" required>
                                 </div>
-
                         </div>
                     </div>
                 </div>
                 <!-- Slide 2 -->
                 <div class="carousel-item">
-                    <div class="card" style="width: 50rem; height:25rem">
+                    <div class="card mx-auto" style="max-width: 100%;">
                         <div class="card-body text-center">
                             <h3>Pembayaran</h3>
                             <p>Silahkan lakukan pembayaran sebesar</p>
@@ -123,22 +117,22 @@
                             <div class="mb-3">
                                 <img src="<?= base_url('assets/images/bri.webp') ?>" alt="logo_bri" style="height: 30px; margin-right: 10px;">
                                 <strong> 0181-01-019449-53-6 </strong>(Alya Nurul Hanifah)
-                                <button class="btn btn-sm btn-outline-secondary" onclick="copyToClipboard('0181-01-019449-53-6')"><i class="fa-regular fa-copy"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary" type="button" onclick="copyToClipboard('0181-01-019449-53-6')"><i class="fa-regular fa-copy"></i></button>
                             </div>
                             <div class="mb-3">
                                 <img src="<?= base_url('assets/images/Shopee.svg.png') ?>" alt="logo_sp" style="height: 30px; margin-right: 10px;">
                                 <strong> 085723639723</strong>(alyanurulll)
-                                <button class="btn btn-sm btn-outline-secondary" onclick="copyToClipboard('085723639723')"><i class="fa-regular fa-copy"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary" type="button" onclick="copyToClipboard('085723639723')"><i class="fa-regular fa-copy"></i></button>
                             </div>
                             <div class="mb-3">
                                 <img src="<?= base_url('assets/images/dana.png') ?>" alt="logo_dana" style="height: 30px; margin-right: 10px;">
                                 <strong> 085723639723 </strong>(Dian Latifah)
-                                <button class="btn btn-sm btn-outline-secondary" onclick="copyToClipboard('085723639723')"><i class="fa-regular fa-copy"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary" type="button" onclick="copyToClipboard('085723639723')"><i class="fa-regular fa-copy"></i></button>
                             </div>
                             <div class="mb-3">
                                 <img src="<?= base_url('assets/images/gopay.png') ?>" alt="logo_gopay" style="height: 30px; margin-right: 10px;">
                                 <strong> 085723639723 </strong>(Alya Nurul Hanifah)
-                                <button class="btn btn-sm btn-outline-secondary" onclick="copyToClipboard('085723639723')"><i class="fa-regular fa-copy"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary" type="button" onclick="copyToClipboard('085723639723')"><i class="fa-regular fa-copy"></i></button>
                             </div>
                         </div>
                     </div>
@@ -146,7 +140,7 @@
 
                 <!-- Slide 3 -->
                 <div class="carousel-item">
-                    <div class="card" style="width: 50rem; height:25rem">
+                    <div class="card mx-auto" style="max-width: 100%;">
                         <div class="card-body">
                             <h3>Upload</h3>
                             <p>Silahkan upload bukti pembayaran</p>
@@ -158,22 +152,20 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+
             <!-- Carousel controls -->
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
 
         <!-- Navigation buttons -->
         <div class="btn-container">
-            <button id="prevBtn" class="btn btn-secondary" style="display: none; ">Prev</button>
+            <button id="prevBtn" class="btn btn-secondary" style="display: none;">Prev</button>
             <button id="nextBtn" class="btn btn-primary">Next</button>
             <button id="submitBtn" class="btn btn-primary" style="display: none;" type="submit" form="registerForm">Submit</button>
         </div>
