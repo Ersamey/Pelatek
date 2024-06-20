@@ -124,7 +124,7 @@
                             <div class="card-body text-center m-3">
                                 <h3>Pembayaran</h3>
                                 <p>Silakan lakukan pembayaran sebesar</p>
-                                <h4>Rp. 10.000</h4>
+                                <h4>Rp. 15.000</h4>
                                 <p class="mt-3">Metode Pembayaran:</p>
                                 <div class="mb-4 align-items-center">
                                     <img src="<?= base_url('assets/images/bri.webp') ?>" alt="logo_bri" style="height: 30px; margin-right: 10px;">
@@ -165,20 +165,12 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Carousel controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
 
             <!-- Navigation buttons -->
             <div class="btn-container">
-                <button id="prevBtn" class="btn btn-secondary" style="display: none;">Previous</button>
-                <button id="nextBtn" class="btn register-button">Next</button>
+                <button id="prevBtn" class="btn btn-secondary" style="display: none;" data-bs-target="#carouselExample" data-bs-slide="prev">Previous</button>
+                <button id="nextBtn" class="btn register-button" data-bs-target="#carouselExample" data-bs-slide="next">Next</button>
                 <button id="submitBtn" class="btn register-button" style="display: none;" type="submit" form="registerForm">Submit</button>
             </div>
         </div>
