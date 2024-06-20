@@ -110,7 +110,7 @@
     <div class="container">
         <div class="text-center">
             <?php
-            if ($sum < 1) : ?>
+            if ($sum < 200) : ?>
                 <h2 class="mb-4">Daftar Sekarang</h2>
                 <p class="lead">Segera daftarkan diri Anda untuk mengikuti pelatihan kami. Klik tombol di bawah ini untuk mendaftar.</p>
                 <a href="<?= base_url('register') ?>" class="btn btn-primary btn-lg">
