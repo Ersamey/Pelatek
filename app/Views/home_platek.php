@@ -16,7 +16,7 @@
                 <?php if ($sum < 200) : ?>
                     <a href="/register" class="btn btn-outline-light btn-lg mt-3">Daftar</a>
                 <?php endif; ?>
-                <p class="mt-1 fw-bold">Daftar sekarang! <?= $sum; ?> orang sudah mendaftar, masih ada <?= 200 - $sum; ?> slot tersedia.</p>
+                <p class="mt-2 fw-bold">Daftar sekarang! <?= $sum; ?> orang sudah mendaftar, masih ada <?= 200 - $sum; ?> slot tersedia.</p>
             </div>
             <div class="col-md-6 text-center">
                 <img src="<?= base_url('assets/images/icon1.svg') ?>" class="img-fluid rounded-circle mt-4" alt="Pelatek Hero Image">
