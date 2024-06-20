@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
 
 <!-- Hero Section -->
-<section id="hero" class="text-white py-5" style="background-color: #FDBB5D;">
+<section id="hero" class="py-5" style="background-color: #FDBB5D;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-start">
@@ -13,8 +13,7 @@
                 <h1 class="display-4 fw-bold">Pelatihan Teknologi</h1>
                 <p class="lead">Pendaftaran Pelatihan Teknologi Terdepan</p>
                 <a href="#about" class="btn btn-outline-light btn-lg mt-3">Pelajari Lebih Lanjut</a>
-                <?php
-                if ($sum < 200) : ?>
+                <?php if ($sum < 200) : ?>
                     <a href="/register" class="btn btn-outline-light btn-lg mt-3">Daftar</a>
                 <?php endif; ?>
                 <p class="mt-1 fw-bold">Daftar sekarang! <?= $sum; ?> orang sudah mendaftar, masih ada <?= 200 - $sum; ?> slot tersedia.</p>
@@ -30,29 +29,18 @@
 <section id="about" class="py-5" style="background-color: #FFF5DA;">
     <div class="container">
         <div class="row">
-            <div class="mb-4">
+            <div class="col-md-7 mb-4">
                 <h2 class="text-center mb-4 title fw-bold">About</h2>
-                <div class="row">
-                    <div class="col-md-7">
-                        <p class="fw-bold d-inline" style="font-size: 1.2em;">BOOTCAMP PELATIHAN TEKNOLOGI <br> </p>
-                        <p class="font-italic">"Creativity through Programming: Learning Web Development"</p>
-                        <p style="font-size: 1.3em;">Kegiatan Pelatihan Teknologi ini akan diadakan secara <strong>daring</strong> melalui Zoom selama 2 jam 30 menit yang akan mempelajari materi dasar tentang <strong>web development</strong> yang mencakup <strong>HTML, CSS, dan JavaScript</strong>. Melalui Pelatihan Teknologi ini, peserta diharapkan mengenali dunia programming dan akan mengerti materi tersebut sehingga dapat mengaplikasikannya sendiri.
-                        </p>
-                    </div>
-                    <div class="col-md-5">
-                        <img src="<?= base_url('assets/images/poster.svg') ?>" alt="" class="img-fluid">
-                    </div>
-                </div>
+                <p class="fw-bold d-inline" style="font-size: 1.2em;">BOOTCAMP PELATIHAN TEKNOLOGI</p>
+                <p class="font-italic">"Creativity through Programming: Learning Web Development"</p>
+                <p style="font-size: 1.3em;">Kegiatan Pelatihan Teknologi ini akan diadakan secara <strong>daring</strong> melalui Zoom selama 2 jam 30 menit yang akan mempelajari materi dasar tentang <strong>web development</strong> yang mencakup <strong>HTML, CSS, dan JavaScript</strong>. Melalui Pelatihan Teknologi ini, peserta diharapkan mengenali dunia programming dan akan mengerti materi tersebut sehingga dapat mengaplikasikannya sendiri.</p>
             </div>
-            <div class="mb-4 text-center ">
-                <h2 class="my-4 title fw-bold">Jadwal Pelatihan</h2>
-                <div class="mb-4">
-                    <img src="<?= base_url('assets/images/timeline.svg') ?>" alt="Pelatek Timeline Image" class="img-fluid mt-5" width="80%">
-                </div>
+            <div class="col-md-5">
+                <img src="<?= base_url('assets/images/poster.svg') ?>" alt="" class="img-fluid">
             </div>
         </div>
+    </div>
 </section>
-
 
 <!-- Features Section -->
 <section id="features" class="py-5" style="background-color: #FFF5DA;">
@@ -90,10 +78,6 @@
     </div>
 </section>
 
-<div class="div" style="background-color: #FFF5DA;">
-    <img src="<?= base_url('assets/images/background.svg') ?>" alt="" class="m-0 p-0">
-</div>
-
 <!-- Contact Section -->
 <section id="contact" class="py-5" style="background-color: #4D5580;">
     <div class="container text-white py-5">
@@ -122,15 +106,13 @@
 <section id="register" class="my-5 py-5">
     <div class="container">
         <div class="text-center">
-            <?php
-            if ($sum < 200) : ?>
+            <?php if ($sum < 200) : ?>
                 <h2 class="mb-4">Daftar Sekarang</h2>
                 <p class="lead">Segera daftarkan diri Anda untuk mengikuti pelatihan kami. Klik tombol di bawah ini untuk mendaftar.</p>
                 <a href="<?= base_url('register') ?>" class="btn btn-lg register-button">
                     <i class="bi bi-person-plus-fill me-2"></i> Daftar Sekarang
                 </a>
-            <?php
-            else : ?>
+            <?php else : ?>
                 <h2 class="mb-4 title fw-bold">Pendaftaran Penuh</h2>
                 <p class="lead">Maaf karena kuota telah mencapai batas, anda sudah tidak dapat mendaftar. Silahkan hubungi kontak yang tertera untuk info selengkapnya.</p>
             <?php endif; ?>

@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <footer class="footer-custom">
+    <footer class="footer-custom mt-auto">
         <div class="container">
             <p class="mb-0">© 2024, Pelatihan Teknologi Kemakom.</p>
         </div>
