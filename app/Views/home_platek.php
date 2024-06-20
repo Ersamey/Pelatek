@@ -14,7 +14,7 @@
                 <p class="lead">Pendaftaran Pelatihan Teknologi Terdepan</p>
                 <a href="#about" class="btn btn-outline-light btn-lg mt-3">Pelajari Lebih Lanjut</a>
                 <?php if ($sum < 200) : ?>
-                    <a href="/register" class="btn btn-outline-light btn-lg mt-3">Daftar</a>
+                    <a href="/daftar" class="btn btn-outline-light btn-lg mt-3">Daftar</a>
                 <?php endif; ?>
                 <p class="mt-2 fw-bold">Daftar sekarang! <?= $sum; ?> orang sudah mendaftar, masih ada <?= 200 - $sum; ?> slot tersedia.</p>
             </div>
@@ -102,14 +102,14 @@
     </div>
 </section>
 
-<!-- Register Section -->
-<section id="register" class="my-5 py-5">
+<!-- daftar Section -->
+<section id="daftar" class="my-5 py-5">
     <div class="container">
         <div class="text-center">
             <?php if ($sum < 200) : ?>
                 <h2 class="mb-4">Daftar Sekarang</h2>
                 <p class="lead">Segera daftarkan diri Anda untuk mengikuti pelatihan kami. Klik tombol di bawah ini untuk mendaftar.</p>
-                <a href="<?= base_url('register') ?>" class="btn btn-lg register-button">
+                <a href="<?= base_url('daftar') ?>" class="btn btn-lg register-button">
                     <i class="bi bi-person-plus-fill me-2"></i> Daftar Sekarang
                 </a>
             <?php else : ?>

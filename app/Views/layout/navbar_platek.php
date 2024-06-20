@@ -31,7 +31,7 @@
             <a class="nav-link fw-bold" href="#contact">Contact</a>
           </li>
           <li class="nav-item ms-lg-2">
-            <a class="nav-link fw-bold btn register-button" href="#register">Register</a>
+            <a class="nav-link fw-bold btn register-button" href="#daftar">Register</a>
           </li>
         </ul>
       </div>
