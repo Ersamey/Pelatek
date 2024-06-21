@@ -98,7 +98,7 @@
                     <div class="carousel-item active">
                         <div class="card mx-auto" style="max-width: 100%;">
                             <div class="card-body">
-                                <form id="registerForm" action="<?= base_url('register/save') ?>" method="post" enctype="multipart/form-data" class="m-3">
+                                <form id="registerForm" action="<?= base_url('daftar/save') ?>" method="post" enctype="multipart/form-data" class="m-3">
                                     <div class="mb-3">
                                         <label for="nama" class="form-label fw-bold">Nama</label>
                                         <input type="text" class="form-control" id="nama" name="nama" value="<?= old('nama') ?>" required>
