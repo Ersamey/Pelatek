@@ -104,6 +104,10 @@
                                         <input type="text" class="form-control" id="nama" name="nama" value="<?= old('nama') ?>" required>
                                     </div>
                                     <div class="mb-3">
+                                        <label for="alamat" class="form-label fw-bold">Alamat</label>
+                                        <textarea id="alamat" name="alamat" class="form-control" style="resize: none;"><?= old('alamat') ?></textarea>
+                                    </div>
+                                    <div class="mb-3">
                                         <label for="email" class="form-label fw-bold">Email</label>
                                         <input type="email" class="form-control" id="email" name="email" value="<?= old('email') ?>" required>
                                     </div>
@@ -129,7 +133,7 @@
                                 <div class="mb-4 align-items-center">
                                     <img src="<?= base_url('assets/images/bri.webp') ?>" alt="logo_bri" style="height: 30px; margin-right: 10px;">
                                     <strong> 0181-01-019449-53-6 </strong>(Alya Nurul Hanifah)
-                                    <button class="btn btn-sm btn-outline-secondary ms-2" type="button" onclick="copyToClipboard('0181-01-019449-53-6')"><i class="far fa-copy"></i></button>
+                                    <button class="btn btn-sm btn-outline-secondary ms-2" type="button" onclick="copyToClipboard('018101019449536')"><i class="far fa-copy"></i></button>
                                 </div>
                                 <div class="mb-4 align-items-center">
                                     <img src="<?= base_url('assets/images/Shopee.svg.png') ?>" alt="logo_sp" style="height: 30px; margin-right: 10px;">

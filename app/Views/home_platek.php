@@ -13,10 +13,9 @@
                 <h1 class="display-4 fw-bold">Pelatihan Teknologi</h1>
                 <p class="lead">Pendaftaran Pelatihan Teknologi Terdepan</p>
                 <a href="#about" class="btn btn-outline-light btn-lg mt-3">Pelajari Lebih Lanjut</a>
-                <?php if ($sum < 200) : ?>
+                <?php if ($sum < 260) : ?>
                     <a href="/daftar" class="btn btn-outline-light btn-lg mt-3">Daftar</a>
                 <?php endif; ?>
-                <p class="mt-2 fw-bold">Daftar sekarang! <?= $sum; ?> orang sudah mendaftar, masih ada <?= 200 - $sum; ?> slot tersedia.</p>
             </div>
             <div class="col-md-6 text-center">
                 <img src="<?= base_url('assets/images/icon1.svg') ?>" class="img-fluid rounded-circle mt-4" alt="Pelatek Hero Image">
@@ -32,8 +31,13 @@
             <div class="col-md-7 mb-4">
                 <h2 class="text-center mb-4 title fw-bold">About</h2>
                 <p class="fw-bold d-inline" style="font-size: 1.2em;">BOOTCAMP PELATIHAN TEKNOLOGI</p>
-                <p class="font-italic">"Creativity through Programming: Learning Web Development"</p>
-                <p style="font-size: 1.3em;">Kegiatan Pelatihan Teknologi ini akan diadakan secara <strong>daring</strong> melalui Zoom selama 2 jam 30 menit yang akan mempelajari materi dasar tentang <strong>web development</strong> yang mencakup <strong>HTML, CSS, dan JavaScript</strong>. Melalui Pelatihan Teknologi ini, peserta diharapkan mengenali dunia programming dan akan mengerti materi tersebut sehingga dapat mengaplikasikannya sendiri.</p>
+                <p style="font-size: 1.2em;" class="mt-2 text-justify">
+                    Kegiatan Pelatihan Teknologi ini akan diadakan secara <strong>daring</strong> melalui Zoom selama 2 jam 30 menit yang akan mempelajari materi dasar tentang <strong>web development</strong> yang mencakup <strong>HTML, CSS, dan JavaScript</strong>.
+                </p>
+                <p style="font-size: 1.2em;" class="mt-2 text-justify">
+                    Melalui Pelatihan Teknologi dengan tema <span class="font-italic fw-bold">"Creativity through Programming: Learning Web Development"</span> ini, peserta diharapkan dapat <strong>mengenali</strong> dunia programming dan peserta juga akan <strong>mengeksplorasi</strong> banyak hal tentang web development sehingga dapat mengaplikasikannya sendiri <strong>sekreatif</strong> mungkin.
+                </p>
+
             </div>
             <div class="col-md-5">
                 <img src="<?= base_url('assets/images/poster.svg') ?>" alt="" class="img-fluid">
@@ -50,9 +54,18 @@
             <div class="col-lg-4 mb-4">
                 <div class="card py-5 h-100 text-center border-0" style="background: linear-gradient(90deg, #E18A74 0%, #BB6371 54.67%, #655077 100%);">
                     <div class="card-body">
-                        <i class="bi bi-laptop display-4 mb-3"></i>
-                        <h5 class="card-title">Pelatihan Online</h5>
-                        <p class="card-text">Belajar dari mana saja dengan modul online kami yang mudah diakses.</p>
+                        <i class="bi bi-award display-4 mb-3"></i>
+                        <h5 class="card-title">E-Certificate</h5>
+                        <p class="card-text">Dapatkan sertifikat yang diakui industri setelah menyelesaikan pelatihan.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card py-5 h-100 text-center border-0" style="background: linear-gradient(90deg, #E18A74 0%, #BB6371 54.67%, #655077 100%);">
+                    <div class="card-body">
+                        <i class="bi bi-gift-fill display-4 mb-3"></i>
+                        <h5 class="card-title">Doorprize</h5>
+                        <p class="card-text">Dapatkan doorprize dengan hadiah yang menarik dan bermanfaat.</p>
                     </div>
                 </div>
             </div>
@@ -60,20 +73,12 @@
                 <div class="card py-5 h-100 text-center border-0" style="background: linear-gradient(90deg, #E18A74 0%, #BB6371 54.67%, #655077 100%);">
                     <div class="card-body">
                         <i class="bi bi-person-lines-fill display-4 mb-3"></i>
-                        <h5 class="card-title">Mentor Berpengalaman</h5>
-                        <p class="card-text">Dapatkan bimbingan langsung dari para ahli teknologi terkemuka.</p>
+                        <h5 class="card-title">Ilmu yang Bermanfaat</h5>
+                        <p class="card-text">Dapatkan ilmu yang bermanfaat langsung dari ahli teknologi terkemuka.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card py-5 h-100 text-center border-0" style="background: linear-gradient(90deg, #E18A74 0%, #BB6371 54.67%, #655077 100%);">
-                    <div class="card-body">
-                        <i class="bi bi-award display-4 mb-3"></i>
-                        <h5 class="card-title">Sertifikat</h5>
-                        <p class="card-text">Dapatkan sertifikat yang diakui industri setelah menyelesaikan pelatihan.</p>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 </section>
@@ -106,7 +111,7 @@
 <section id="daftar" class="my-5 py-5">
     <div class="container">
         <div class="text-center">
-            <?php if ($sum < 200) : ?>
+            <?php if ($sum < 260) : ?>
                 <h2 class="mb-4">Daftar Sekarang</h2>
                 <p class="lead">Segera daftarkan diri Anda untuk mengikuti pelatihan kami. Klik tombol di bawah ini untuk mendaftar.</p>
                 <a href="<?= base_url('daftar') ?>" class="btn btn-lg register-button">
