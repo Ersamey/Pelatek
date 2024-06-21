@@ -164,7 +164,19 @@
                                     <label for="bukti_pembayaran" class="form-label fw-bold">Upload File</label>
                                     <input type="file" class="form-control " id="bukti_pembayaran" name="bukti_pembayaran" required>
                                 </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                                    <label class="form-check-label">
+                                        Saya telah setuju dengan <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Syarat dan Ketentuan</a> yang dicantumkan
+                                    </label>
+                                </div>
                                 </form>
+                                <div class="collapse mt-4" id="collapseExample">
+                                    <p class="fw-bold text-center">Syarat dan Ketentuan</p>
+                                    <p class="text-justify">
+                                        Baca ketentuan di bawah ini untuk mempelajari lebih lanjut tentang hak dan tanggung jawab sebagai peserta Bootcamp Pelatihan Teknologi 2024. Peserta memiliki hak untuk mendapat informasi umum berkaitan dengan Pelatihan Teknologi 2024. Di akhir bootcamp akan mendapatkan sertifikat apabila mengikuti seluruh rangkaian sampai akhir. Informasi berupa data peserta yaitu nama, nomor telepon akan digunakan oleh panitia untuk kepentingan keberlangsungan acara. Peserta wajib mengikuti seluruh sesi pelatihan online sesuai jadwal. Hal-hal yang belum dicantumkan disini akan disampaikan kemudian melalui panduan, informasi langsung panitia, email maupun grup aplikasi WhatsApp.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -183,6 +195,15 @@
 </div>
 
 <script>
+    // SnK focus
+    var collapseExample = document.getElementById('collapseExample');
+    collapseExample.addEventListener('shown.bs.collapse', function() {
+        collapseExample.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+    // SnK focus
+
     const carousel = document.querySelector('#carouselExample');
     const prevBtn = document.querySelector('#prevBtn');
     const nextBtn = document.querySelector('#nextBtn');
