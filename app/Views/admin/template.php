@@ -20,6 +20,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- bootstrap cdn -->
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <!-- datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
+
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+
     <!-- Custom styles for this template-->
     <link href="<?= base_url(); ?>/css/sb-admin-2.min.css" rel="stylesheet">
     <style>
@@ -77,8 +87,10 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
+            <?php $currentSegment = service('uri')->getSegment(1); ?>
+
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
+            <li class="nav-item <?= ($currentSegment == 'admin') ? 'active' : ''; ?>">
                 <a class="nav-link" href="/admin">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -86,14 +98,14 @@
             </li>
 
             <!-- Nav Item - ACC -->
-            <li class="nav-item">
+            <li class="nav-item <?= ($currentSegment == 'acc') ? 'active' : ''; ?>">
                 <a class="nav-link" href="/acc">
                     <i class="fas fa-fw fa-check"></i>
                     <span>Acc</span></a>
             </li>
 
             <!-- Nav Item - Tunda -->
-            <li class="nav-item">
+            <li class="nav-item <?= ($currentSegment == 'pending') ? 'active' : ''; ?>">
                 <a class="nav-link" href="/pending">
                     <i class="fas fa-fw fa-hourglass-start"></i>
                     <span>Tunda</span></a>
@@ -110,49 +122,12 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <!-- Topbar Search -->
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-warning" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item">
-                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#logoutModal">
-                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Logout
-                            </a>
-                        </li>
-
-
-
-                    </ul>
-
+                    <div class="ms-auto">
+                        <button class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2"></i>
+                            Logout
+                        </button>
+                    </div>
                 </nav>
                 <!-- End of Topbar -->
 
@@ -195,12 +170,18 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="/logout">Logout</a>
+                    <a class="btn btn-danger" href="/logout">Logout</a>
                 </div>
             </div>
         </div>
     </div>
-
+    <script>
+        $(document).ready(function() {
+            $('.myTable').DataTable({
+                responsive: true
+            });
+        });
+    </script>
     <!-- Bootstrap core JavaScript-->
     <script src="<?= base_url(); ?>/vendor/jquery/jquery.min.js"></script>
     <script src="<?= base_url(); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
