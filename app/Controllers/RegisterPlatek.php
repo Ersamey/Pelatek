@@ -32,13 +32,13 @@ class RegisterPlatek extends Controller
       'email' => 'required|valid_email',
       'no_telp' => 'required',
       'afiliasi' => 'required',
+      'alamat' => 'required',
       'bukti_pembayaran' => 'uploaded[bukti_pembayaran]|max_size[bukti_pembayaran,1024]|ext_in[bukti_pembayaran,jpg,jpeg,png,pdf]',
     ]);
 
     if (!$validation->withRequest($this->request)->run()) {
       return redirect()->back()->withInput()->with('errors', $validation->getErrors());
     }
-
     $bukti_pembayaran = $this->request->getFile('bukti_pembayaran');
     $bukti_pembayaran->move('images');
 
@@ -47,6 +47,7 @@ class RegisterPlatek extends Controller
       'email' => $this->request->getPost('email'),
       'no_telp' => $this->request->getPost('no_telp'),
       'afiliasi' => $this->request->getPost('afiliasi'),
+      'alamat' => $this->request->getPost('alamat'),
       'pembayaran' => $bukti_pembayaran->getName(),
       'created_at' => date('Y-m-d H:i:s'),
       'updated_at' => date('Y-m-d H:i:s')

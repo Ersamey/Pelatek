@@ -18,6 +18,7 @@
                                 <th class="center-content">Email</th>
                                 <th class="center-content">No Telp</th>
                                 <th class="center-content">Afiliasi</th>
+                                <th class="center-content">Alamat</th>
                                 <th class="center-content">Status</th>
                                 <th class="center-content">View</th>
                                 <th class="center-content">Aksi</th>
@@ -33,6 +34,7 @@
                                     <td><?= $p['email']; ?></td>
                                     <td><?= $p['no_telp']; ?></td>
                                     <td><?= $p['afiliasi']; ?></td>
+                                    <td><?= $p['alamat']; ?></td>
                                     <td><?php if ($p['status'] == 0) {
                                         echo "Pending";
                                     } else if ($p['status'] == 1) {
