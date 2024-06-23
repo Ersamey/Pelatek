@@ -4,7 +4,6 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
     <h2 class="text-dark fw-bold mb-4">Seluruh Pendaftar</h2>
-    <h2 class="text-dark fw-bold mb-4">Seluruh Pendaftar</h2>
     <?php
     $i = 1;
     ?>
