@@ -7,8 +7,10 @@ use CodeIgniter\Model;
 class RegisterModel extends Model
 {
     protected $table = 'pendaftar';
-    protected $useTimeStamps = true;
-    protected $allowedFields = ['nama', 'email', 'no_telp', 'afiliasi', 'pembayaran', 'alamat', 'created_at', 'updated_at'];
+    protected $useTimestamps = true;
+    protected $allowedFields = [
+        'nama', 'email', 'no_telp', 'afiliasi', 'pembayaran', 'alamat', 'id', 'created_at', 'updated_at', 'no_registrasi'
+    ];
 
     public function getSum()
     {
@@ -33,4 +35,21 @@ class RegisterModel extends Model
         $this->db->table('pendaftar')->update(['status' => '0'], ['id' => $id]);
     }
 
+    public function getEvent()
+    {
+        return $this->db->table('detail_event')->get()->getRow();
+    }
+
+    public function getNewRegistrationNumber()
+    {
+        $year = date('y'); // 2 digit tahun
+        $event = $this->getEvent(); // Get event details
+        $eventNumber = str_pad($event->nomor_event, 2, '0', STR_PAD_LEFT); // 2 digit nomor event
+
+        // Hitung urutan pendaftar
+        $registrantsCount = $this->countAllResults();
+        $registrantNumber = str_pad($registrantsCount + 1, 3, '0', STR_PAD_LEFT); // 3 digit urutan pendaftar
+
+        return $year . $eventNumber . $registrantNumber;
+    }
 }

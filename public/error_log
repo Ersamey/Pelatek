@@ -1,0 +1,7 @@
+[21-Jun-2024 15:01:01 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "Config\App" in /home/kemakomo/pelatek.kemakom.org/app/Config/Autoload.php:44
+Stack trace:
+#0 /home/kemakomo/pelatek.kemakom.org/vendor/codeigniter4/framework/system/Boot.php(244): [constant expression]()
+#1 /home/kemakomo/pelatek.kemakom.org/vendor/codeigniter4/framework/system/Boot.php(54): CodeIgniter\Boot::loadAutoloader()
+#2 /home/kemakomo/pelatek.kemakom.org/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#3 {main}
+  thrown in /home/kemakomo/pelatek.kemakom.org/app/Config/Autoload.php on line 44

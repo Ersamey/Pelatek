@@ -11,6 +11,7 @@
                     <h4 class="card-title fw-bold">Pendaftaran berhasil.</h4>
                     <img src="<?= base_url('assets/images/success.svg') ?>" alt="" class="my-3">
                     <p class="card-text my-3">Terima kasih telah mendaftar. Agar tidak tertinggal info selanjutnya, silakan bergabung dengan grup WhatsApp kami melalui link dibawah ini:</p>
+                    <p class="card-text my-3">Nomor Registrasi Anda: <strong><?= $no_registrasi ?></strong></p>
                     <a href="https://chat.whatsapp.com/Id0nlNvtZoAGrm9RqIAwTm" target="_blank" class="btn register-button fw-bold">Bergabung ke Grup</a>
                 </div>
             </div>
