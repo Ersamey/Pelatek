@@ -84,6 +84,7 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
+
             <?php $currentSegment = service('uri')->getSegment(1); ?>
 
             <!-- Nav Item - Dashboard -->
